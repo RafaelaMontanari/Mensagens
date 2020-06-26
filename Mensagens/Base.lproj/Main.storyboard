@@ -233,14 +233,42 @@
                                     <action selector="changeColor:" destination="baW-qB-pkc" eventType="touchUpInside" id="Xpq-tP-wC9"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDp-9F-2md">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kpb-QM-kvy">
+                                        <rect key="frame" x="306" y="14.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="changeBorder:" destination="baW-qB-pkc" eventType="valueChanged" id="y01-K6-ZMi"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usar borda branca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w86-xy-ah5">
+                                        <rect key="frame" x="170.5" y="21" width="127.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5e2-Pt-tSx"/>
+                                    <constraint firstItem="Kpb-QM-kvy" firstAttribute="centerY" secondItem="mDp-9F-2md" secondAttribute="centerY" id="AVA-b9-RSL"/>
+                                    <constraint firstItem="Kpb-QM-kvy" firstAttribute="leading" secondItem="w86-xy-ah5" secondAttribute="trailing" constant="8" id="Abg-UJ-JTr"/>
+                                    <constraint firstItem="w86-xy-ah5" firstAttribute="centerY" secondItem="mDp-9F-2md" secondAttribute="centerY" id="t3S-S5-Wby"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kpb-QM-kvy" secondAttribute="trailing" constant="20" id="wjp-7k-P6u"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FOq-QF-Jxz" firstAttribute="trailing" secondItem="hh3-Lg-U6s" secondAttribute="trailing" constant="25" id="6dA-yX-lux"/>
                             <constraint firstItem="4gr-zU-vkM" firstAttribute="top" secondItem="hh3-Lg-U6s" secondAttribute="bottom" constant="10" id="Ff4-fe-Y0r"/>
                             <constraint firstItem="4gr-zU-vkM" firstAttribute="centerX" secondItem="hh3-Lg-U6s" secondAttribute="centerX" id="MXs-86-P2S"/>
+                            <constraint firstItem="mDp-9F-2md" firstAttribute="bottom" secondItem="FOq-QF-Jxz" secondAttribute="bottom" id="TlE-jn-2yr"/>
+                            <constraint firstItem="mDp-9F-2md" firstAttribute="trailing" secondItem="FOq-QF-Jxz" secondAttribute="trailing" id="Zud-mD-eBq"/>
                             <constraint firstItem="hh3-Lg-U6s" firstAttribute="leading" secondItem="FOq-QF-Jxz" secondAttribute="leading" constant="25" id="dQJ-od-UWn"/>
                             <constraint firstItem="hh3-Lg-U6s" firstAttribute="top" secondItem="FOq-QF-Jxz" secondAttribute="top" constant="20" id="guk-j0-SrF"/>
+                            <constraint firstItem="mDp-9F-2md" firstAttribute="leading" secondItem="FOq-QF-Jxz" secondAttribute="leading" id="jrX-6k-FiQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FOq-QF-Jxz"/>
                     </view>
@@ -253,12 +281,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="lbMessage" destination="lI7-jy-qur" id="up9-y3-HIn"/>
+                        <outlet property="swWhiteBorder" destination="Kpb-QM-kvy" id="r6g-x1-fsr"/>
                         <outlet property="viBorder" destination="hh3-Lg-U6s" id="pNT-Iu-cdM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVW-27-K1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="133"/>
+            <point key="canvasLocation" x="1980" y="132.68365817091455"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="idx-DO-QI4">
